@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CaseReportal.Model
+namespace CaseReportal.Model.Entities
 {
     public class Article
     {

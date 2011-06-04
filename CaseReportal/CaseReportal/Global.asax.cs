@@ -9,6 +9,7 @@ using System.Web.Routing;
 using Autofac;
 using Autofac.Integration.Web;
 using Autofac.Integration.Web.Mvc;
+using CaseReportal.Model;
 
 namespace CaseReportal
 {
@@ -37,6 +38,7 @@ namespace CaseReportal
 
             //builder.RegisterModelBinders(Assembly.GetExecutingAssembly());
             builder.RegisterControllers(Assembly.GetExecutingAssembly());
+            builder.RegisterModule<ModelModule>();
             _containerProvider = new ContainerProvider(builder.Build());
             // Set the controller factory using the container provider.
             ControllerBuilder.Current.SetControllerFactory(new AutofacControllerFactory(ContainerProvider));

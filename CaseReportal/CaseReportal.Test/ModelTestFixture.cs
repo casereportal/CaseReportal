@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using CaseReportal.Model;
+using CaseReportal.Model.Entities;
 using CaseReportal.Model.Mapping;
 using FluentNHibernate.Automapping;
 using FluentNHibernate.Automapping.Alterations;
@@ -19,26 +20,50 @@ namespace CaseReportal.Test
     [TestFixture]
     public class ModelTestFixture
     {
-        private Configuration cfg;
+        private Configuration _configuration;
+
         [SetUp]
         public void Setup()
         {
-            cfg = Fluently.Configure()
-                    .Database(MsSqlConfiguration.MsSql2008)
-                    .Mappings(x => x.AutoMappings.Add(AutoMap.AssemblyOf<ModelTestFixture>(new CaseReportalAutomappingConfiguration()).UseOverridesFromAssemblyOf<ReviewOverrides>()))
+            _configuration = Fluently.Configure()
+                    .Database(MsSqlConfiguration.MsSql2008.ConnectionString(x => x.Database("593101_swbos")
+                                                                                  .Username("593101_swbos")
+                                                                                  .Password("SW931ab2")
+                                                                                  .Server("72.3.204.155,4120")))
+                    .Mappings(x => x.AutoMappings.Add(AutoMap.AssemblyOf<CaseReportalAutomappingConfiguration>(new CaseReportalAutomappingConfiguration())
+                                                 .UseOverridesFromAssemblyOf<ReviewOverrides>()))
                     .BuildConfiguration();
         }
         [Test]
         public void OutputSchemaTest()
         {
-            var se = new SchemaExport(cfg);
+            var se = new SchemaExport(_configuration);
             se.SetOutputFile("Output.txt");
-            se.Create(true, false);
+            se.Create(true, true);
         }
         [Test]
         public void CanBuildSessionFActory()
         {
-            var sf = cfg.BuildSessionFactory();
+            var sf = _configuration.BuildSessionFactory();
+            using (var ses = sf.OpenSession())
+            {
+                using (var itx = ses.BeginTransaction())
+                {
+                    //var r = new Role();
+                    //r.RoleName = "Nick's Role";
+
+                    //var user = new User();
+                    //user.FirstName = "Nicholas";
+                    //user.LastName = "Goodwin";
+                    //user.Nonce = "123";
+                    //user.Password = "Mypassword";
+                    //user.Email = "theunforgiven@gmail.com";
+                    //user.Role = r;
+                    //ses.Save(r);
+                    //ses.Save(user);
+                    //itx.Commit();
+                }
+            }
         }
     }
 

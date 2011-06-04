@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CaseReportal.Model
+namespace CaseReportal.Model.Entities
 {
     public class User
     {

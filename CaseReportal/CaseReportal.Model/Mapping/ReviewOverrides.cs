@@ -1,4 +1,5 @@
-﻿using FluentNHibernate.Automapping;
+﻿using CaseReportal.Model.Entities;
+using FluentNHibernate.Automapping;
 using FluentNHibernate.Automapping.Alterations;
 
 namespace CaseReportal.Model.Mapping
