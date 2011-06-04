@@ -1,0 +1,191 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Models/f:AccountModels.cs" caret="0" fromTop="0" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Views/d:Home/f:Index.aspx" caret="0" fromTop="0" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Controllers/f:HomeController.cs" caret="356" fromTop="15" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Views/f:Web.config" caret="0" fromTop="0" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/f:Web.config" caret="3838" fromTop="30" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/f:Global.asax.cs" caret="1218" fromTop="2" />
+      <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Entities/f:Article.cs" caret="504" fromTop="31" />
+      <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Mapping/f:ReviewOverrides.cs" caret="358" fromTop="12" />
+      <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Mapping/f:CaseReportalAutomappingConfiguration.cs" caret="197" fromTop="8" />
+      <File id="81D486B7-DE89-4B5D-8574-AD2E3CB5AC29/f:ModelTestFixture.cs" caret="626" fromTop="22" />
+      <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/f:ModelModule.cs" caret="980" fromTop="22" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="81D486B7-DE89-4B5D-8574-AD2E3CB5AC29/f:ModelTestFixture.cs" caret="1322" fromTop="20" />
+      <File id="81D486B7-DE89-4B5D-8574-AD2E3CB5AC29/f:ModelTestFixture.cs" caret="1313" fromTop="11" />
+      <File id="81D486B7-DE89-4B5D-8574-AD2E3CB5AC29/f:ModelTestFixture.cs" caret="1322" fromTop="12" />
+      <File id="81D486B7-DE89-4B5D-8574-AD2E3CB5AC29/f:ModelTestFixture.cs" caret="1322" fromTop="31" />
+      <File id="81D486B7-DE89-4B5D-8574-AD2E3CB5AC29/f:ModelTestFixture.cs" caret="1158" fromTop="22" />
+      <File id="81D486B7-DE89-4B5D-8574-AD2E3CB5AC29/f:ModelTestFixture.cs" caret="979" fromTop="17" />
+      <File id="81D486B7-DE89-4B5D-8574-AD2E3CB5AC29/f:ModelTestFixture.cs" caret="1313" fromTop="19" />
+      <File id="81D486B7-DE89-4B5D-8574-AD2E3CB5AC29/f:ModelTestFixture.cs" caret="1313" fromTop="28" />
+      <File id="81D486B7-DE89-4B5D-8574-AD2E3CB5AC29/f:ModelTestFixture.cs" caret="1313" fromTop="14" />
+      <File id="81D486B7-DE89-4B5D-8574-AD2E3CB5AC29/f:ModelTestFixture.cs" caret="1313" fromTop="18" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/f:Web.config" caret="3838" fromTop="30" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/f:Web.config" caret="3838" fromTop="36" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/f:Global.asax.cs" caret="1552" fromTop="25" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/f:Global.asax.cs" caret="1552" fromTop="22" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/f:Global.asax.cs" caret="1573" fromTop="19" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/f:Global.asax.cs" caret="563" fromTop="5" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/f:Global.asax.cs" caret="1771" fromTop="32" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/f:Global.asax.cs" caret="1550" fromTop="27" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/f:Global.asax.cs" caret="1218" fromTop="2" />
+      <File id="81D486B7-DE89-4B5D-8574-AD2E3CB5AC29/f:ModelTestFixture.cs" caret="515" fromTop="18" />
+      <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Entities/f:Article.cs" caret="504" fromTop="5" />
+      <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Entities/f:Article.cs" caret="504" fromTop="31" />
+      <File id="81D486B7-DE89-4B5D-8574-AD2E3CB5AC29/f:ModelTestFixture.cs" caret="1313" fromTop="5" />
+      <File id="81D486B7-DE89-4B5D-8574-AD2E3CB5AC29/f:ModelTestFixture.cs" caret="1322" fromTop="5" />
+      <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Mapping/f:CaseReportalAutomappingConfiguration.cs" caret="205" fromTop="9" />
+      <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Mapping/f:CaseReportalAutomappingConfiguration.cs" caret="414" fromTop="9" />
+      <File id="81D486B7-DE89-4B5D-8574-AD2E3CB5AC29/f:ModelTestFixture.cs" caret="756" fromTop="24" />
+      <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/f:ModelModule.cs" caret="1311" fromTop="15" />
+      <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/f:ModelModule.cs" caret="444" fromTop="16" />
+      <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/f:ModelModule.cs" caret="980" fromTop="22" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="public" priority="29" />
+      <Item value="prop" priority="10" />
+      <Item value="Int32`0" priority="2" />
+      <Item value="string" priority="8" />
+      <Item value="DateTime`0" priority="2" />
+      <Item value="class" priority="6" />
+      <Item value="Article`0" priority="2" />
+      <Item value="User`0" priority="0" />
+      <Item value="bool" priority="0" />
+      <Item value="Class1`0" priority="3" />
+      <Item value="SetUpAttribute`0" priority="0" />
+      <Item value="MsSql2008Dialect" priority="0" />
+      <Item value="MsSqlConfiguration" priority="0" />
+      <Item value="AutoMapper" priority="0" />
+      <Item value="AutoMap`0" priority="1" />
+      <Item value="MsSql2008Dialect`0" priority="0" />
+      <Item value="var" priority="1" />
+      <Item value="new" priority="0" />
+      <Item value="cfg" priority="1" />
+      <Item value="Lazy" priority="0" />
+      <Item value="se" priority="1" />
+      <Item value="CaseReportal" priority="1" />
+      <Item value="void" priority="1" />
+      <Item value="private" priority="0" />
+      <Item value="DefaultAutomappingConfiguration`0" priority="0" />
+      <Item value="override" priority="4" />
+      <Item value="type" priority="2" />
+      <Item value="typeof" priority="4" />
+      <Item value="AutoMapCR`0" priority="0" />
+      <Item value="IConventionBuilder" priority="0" />
+      <Item value="ISet" priority="0" />
+      <Item value="virtual" priority="0" />
+      <Item value="this" priority="0" />
+      <Item value="Map`0" priority="0" />
+      <Item value="x" priority="10" />
+      <Item value="namespace" priority="0" />
+      <Item value="DivideByZeroException`0" priority="0" />
+      <Item value="IAutoMappingOverride" priority="0" />
+      <Item value="mapping" priority="3" />
+      <Item value="Overrides`0" priority="0" />
+      <Item value="ReviewOverrides`0" priority="0" />
+      <Item value="ContainerProvider`0" priority="0" />
+      <Item value="builder" priority="1" />
+      <Item value="return" priority="0" />
+      <Item value="CaseReportalAutomappingConfiguration" priority="0" />
+      <Item value="ModelModule`0" priority="0" />
+      <Item value="sessionFactory" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@FluentNHibernate.Cfg.Fluently">
+      <Item value="Configure`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentNHibernate.Cfg.FluentConfiguration">
+      <Item value="Database`0" priority="0" />
+      <Item value="Mappings`0" priority="1" />
+      <Item value="BuildConfiguration`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@FluentNHibernate.Cfg.Db.MsSqlConfiguration">
+      <Item value="MsSql2008" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentNHibernate.Cfg.MappingConfiguration">
+      <Item value="AutoMappings" priority="3" />
+      <Item value="FluentMappings" priority="0" />
+      <Item value="MergeMappings`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentNHibernate.Cfg.AutoMappingsContainer">
+      <Item value="Add`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@FluentNHibernate.Automapping.AutoMap">
+      <Item value="Assemblies`0" priority="1" />
+      <Item value="AssemblyOf`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NHibernate.Cfg.Configuration">
+      <Item value="BuildSessionFactory`0" priority="2" />
+      <Item value="GenerateSchemaCreationScript`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NHibernate.Dialect.MsSql2008Dialect">
+      <Item value="GetDialect`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NHibernate.Tool.hbm2ddl.SchemaExport">
+      <Item value="SetOutputFile`0" priority="0" />
+      <Item value="Create`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CaseReportal.Test.Article">
+      <Item value="Title" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentNHibernate.Mapping.PropertyPart">
+      <Item value="Length`0" priority="2" />
+      <Item value="Column`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Type">
+      <Item value="Namespace" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentNHibernate.Cfg.FluentMappingsContainer">
+      <Item value="AddFromAssembly`0" priority="0" />
+      <Item value="AddFromAssemblyOf`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentNHibernate.Automapping.AutoMapping`1">
+      <Item value="Map`0" priority="3" />
+      <Item value="References`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CaseReportal.Model.Article">
+      <Item value="Title" priority="0" />
+      <Item value="Case" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CaseReportal.Model.Review">
+      <Item value="Reviewer" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentNHibernate.Automapping.AutoPersistenceModel">
+      <Item value="UseOverridesFromAssemblyOf`1" priority="0" />
+      <Item value="Override`1" priority="0" />
+      <Item value="UseOverridesFromAssembly`0" priority="0" />
+      <Item value="Where`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Autofac.ContainerBuilder">
+      <Item value="Build`0" priority="0" />
+      <Item value="RegisterType`0" priority="0" />
+      <Item value="Register`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Autofac.Builder.IRegistrationBuilder`3">
+      <Item value="As`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
