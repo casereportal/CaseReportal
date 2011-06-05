@@ -72,11 +72,11 @@ namespace CaseReportal.Models
         public string ConfirmPassword { get; set; }
 
         [Required]
-        [DisplayName("First Name")]
+        [DisplayName("Last Name")]
         public string LastName { get; set; }
 
         [Required]
-        [DisplayName("Last Name")]
+        [DisplayName("First Name")]
         public string FirstName { get; set; }
     }
     #endregion
@@ -223,17 +223,17 @@ namespace CaseReportal.Models
 
     public interface IFormsAuthenticationService
     {
-        void SignIn(string userName, bool createPersistentCookie);
+        void SignIn(string displayName, bool createPersistentCookie);
         void SignOut();
     }
 
     public class FormsAuthenticationService : IFormsAuthenticationService
     {
-        public void SignIn(string userName, bool createPersistentCookie)
+        public void SignIn(string displayName, bool createPersistentCookie)
         {
-            if (String.IsNullOrEmpty(userName)) throw new ArgumentException("Value cannot be null or empty.", "userName");
+            if (String.IsNullOrEmpty(displayName)) throw new ArgumentException("Value cannot be null or empty.", "displayName");
 
-            FormsAuthentication.SetAuthCookie(userName, createPersistentCookie);
+            FormsAuthentication.SetAuthCookie(displayName, createPersistentCookie);
         }
 
         public void SignOut()

@@ -9,6 +9,7 @@ namespace CaseReportal.Model.Mapping
         public void Override(AutoMapping<Review> mapping)
         {
             mapping.References(x => x.Reviewer).Column("User_id").Not.Nullable();
+            mapping.References(x => x.Article).Not.Nullable();
         }
     }
 }
