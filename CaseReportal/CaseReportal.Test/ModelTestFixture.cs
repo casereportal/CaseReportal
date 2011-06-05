@@ -38,8 +38,10 @@ namespace CaseReportal.Test
         [Test]
         public void OutputSchemaTest()
         {
+            
             var se = new SchemaExport(_configuration);
             se.SetOutputFile("Output.txt");
+            se.Execute(true, true, true);
             se.Execute(true, true, false);
 
             var sf = this._configuration.BuildSessionFactory();
