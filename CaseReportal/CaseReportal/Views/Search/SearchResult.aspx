@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <% foreach (var item in ViewData.Model.articles)
        {%>
-         <p>Cases : <%=item.Title;%> </p> 
+         <p>Cases : <%: Html.ActionLink(item.Title, "ViewArticle", "Home", new { articleId = item.Id }, new {}) %> </p> 
        <%} %>
 </asp:Content>
 

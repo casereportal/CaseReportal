@@ -18,8 +18,27 @@ namespace CaseReportal.Controllers
         {
             this._Session = session;
         }
+
+        public ActionResult ViewArticle(int? articleId)
+        {
+            if (articleId.HasValue == false)
+            {
+                return Index();
+            }
+            Article article;
+            using (var itx = _Session.BeginTransaction())
+            {
+                article = _Session.QueryOver<Article>().Where(x => x.Id == articleId).SingleOrDefault();
+            }
+            return View(article);
+        }
+
         public ActionResult Index()
         {
+            if (this.User.Identity.IsAuthenticated == false)
+            {
+                return View();
+            }
             var homeViewModel = new HomeViewModel();
             using (var itx =_Session.BeginTransaction())
             {
