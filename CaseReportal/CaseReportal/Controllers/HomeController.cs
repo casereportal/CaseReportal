@@ -21,7 +21,7 @@ namespace CaseReportal.Controllers
         {
             ViewData["Message"] = "Welcome to ASP.NET MVC!";
 
-            var users = this._Session.QueryOver<User>().List();
+            var users = this._Session.QueryOver<User>().List<User>();
             ViewData["Users"] = users;
 
             return View();
