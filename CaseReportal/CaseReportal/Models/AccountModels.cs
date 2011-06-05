@@ -151,6 +151,7 @@ namespace CaseReportal.Models
             user.LastName = lastName;
             user.Nonce = this.CreateNonce();
             user.Password = this.CreateHash(password, user.Nonce);
+            user.Role = _Session.QueryOver<Role>().Where(x => x.RoleName == "UserRole").SingleOrDefault();
             _Session.Save(user);
 
             return MembershipCreateStatus.Success;
