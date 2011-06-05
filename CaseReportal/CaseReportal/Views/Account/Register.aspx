@@ -20,13 +20,21 @@
                 <legend>Account Information</legend>
                 
                 <div class="editor-label">
-                    <%: Html.LabelFor(m => m.UserName) %>
+                    <%: Html.LabelFor(m => m.FirstName) %>
                 </div>
                 <div class="editor-field">
-                    <%: Html.TextBoxFor(m => m.UserName) %>
-                    <%: Html.ValidationMessageFor(m => m.UserName) %>
+                    <%: Html.TextBoxFor(m => m.FirstName) %>
+                    <%: Html.ValidationMessageFor(m => m.FirstName)%>
                 </div>
                 
+                <div class="editor-label">
+                    <%: Html.LabelFor(m => m.LastName) %>
+                </div>
+                <div class="editor-field">
+                    <%: Html.TextBoxFor(m => m.LastName)%>
+                    <%: Html.ValidationMessageFor(m => m.LastName) %>
+                </div>
+
                 <div class="editor-label">
                     <%: Html.LabelFor(m => m.Email) %>
                 </div>

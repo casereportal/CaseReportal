@@ -1,10 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
+using Iesi.Collections.Generic;
 
 namespace CaseReportal.Model.Entities
 {
     public class Article
     {
+        public Article()
+        {
+            this.Reviews = new HashedSet<Review>();
+        }
         public virtual Int32 Id { get; set; }
         public virtual User User { get; set; }
         public virtual string Title { get; set; }

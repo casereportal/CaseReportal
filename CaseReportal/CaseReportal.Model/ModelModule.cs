@@ -5,6 +5,7 @@ using FluentNHibernate.Automapping;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
+using Autofac.Integration.Web;
 
 namespace CaseReportal.Model
 {
@@ -23,7 +24,8 @@ namespace CaseReportal.Model
 
             var sessionFactory = cfg.BuildSessionFactory();
             builder.Register(x => sessionFactory).As<ISessionFactory>();
-            builder.Register(x => x.Resolve<ISessionFactory>().OpenSession());
+            builder.Register(x => x.Resolve<ISessionFactory>().OpenSession())
+                   .InstancePerHttpRequest();
         }
     }
 }

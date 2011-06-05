@@ -4,9 +4,13 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using CaseReportal.Model.Entities;
+using NHibernate;
 
 namespace CaseReportal.Models
 {
@@ -35,8 +39,8 @@ namespace CaseReportal.Models
     public class LogOnModel
     {
         [Required]
-        [DisplayName("User name")]
-        public string UserName { get; set; }
+        [DisplayName("Email")]
+        public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -50,10 +54,6 @@ namespace CaseReportal.Models
     [PropertiesMustMatch("Password", "ConfirmPassword", ErrorMessage = "The password and confirmation password do not match.")]
     public class RegisterModel
     {
-        [Required]
-        [DisplayName("User name")]
-        public string UserName { get; set; }
-
         [Required]
         [DataType(DataType.EmailAddress)]
         [DisplayName("Email address")]
@@ -69,6 +69,14 @@ namespace CaseReportal.Models
         [DataType(DataType.Password)]
         [DisplayName("Confirm password")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [DisplayName("First Name")]
+        public string LastName { get; set; }
+
+        [Required]
+        [DisplayName("Last Name")]
+        public string FirstName { get; set; }
     }
     #endregion
 
@@ -82,50 +90,84 @@ namespace CaseReportal.Models
     {
         int MinPasswordLength { get; }
 
-        bool ValidateUser(string userName, string password);
-        MembershipCreateStatus CreateUser(string userName, string password, string email);
-        bool ChangePassword(string userName, string oldPassword, string newPassword);
+        bool ValidateUser(string email, string password);
+        MembershipCreateStatus CreateUser(string firstName, string lastName, string password, string email);
+        bool ChangePassword(string email, string oldPassword, string newPassword);
+        string DisplayNameForUser(string email);
     }
 
     public class AccountMembershipService : IMembershipService
-    {
-        private readonly MembershipProvider _provider;
+    { 
+        private static readonly HashAlgorithm HashProvider = new SHA256Managed();
 
-        public AccountMembershipService()
-            : this(null)
-        {
-        }
+        private readonly ISession _Session;
 
-        public AccountMembershipService(MembershipProvider provider)
+        public AccountMembershipService(ISession session)
         {
-            _provider = provider ?? Membership.Provider;
+            _Session = session;
         }
 
         public int MinPasswordLength
         {
-            get
-            {
-                return _provider.MinRequiredPasswordLength;
-            }
+            get { return 8; }
         }
 
-        public bool ValidateUser(string userName, string password)
+        public bool ValidateUser(string email, string password)
         {
-            if (String.IsNullOrEmpty(userName)) throw new ArgumentException("Value cannot be null or empty.", "userName");
+            if (String.IsNullOrEmpty(email)) throw new ArgumentException("Value cannot be null or empty.", "email");
             if (String.IsNullOrEmpty(password)) throw new ArgumentException("Value cannot be null or empty.", "password");
-
-            return _provider.ValidateUser(userName, password);
+            var u = FindUserByEmail(email);
+            
+            return ValidateUser(u, password);
         }
 
-        public MembershipCreateStatus CreateUser(string userName, string password, string email)
+        private bool ValidateUser(User user, string password)
         {
-            if (String.IsNullOrEmpty(userName)) throw new ArgumentException("Value cannot be null or empty.", "userName");
+            if (user == null)
+            {
+                return false;
+            }
+
+            return this.CreateHash(password, user.Nonce) == user.Password;
+        }
+
+        private User FindUserByEmail(string email)
+        {
+            return _Session.QueryOver<User>().Where(x => x.Email == email).SingleOrDefault();
+        }
+
+        public MembershipCreateStatus CreateUser(string firstName, string lastName, 
+                                                 string password, string email)
+        {
+            if (String.IsNullOrEmpty(firstName)) throw new ArgumentException("Value cannot be null or empty.", "firstName");
+            if (String.IsNullOrEmpty(lastName)) throw new ArgumentException("Value cannot be null or empty.", "lastName");
             if (String.IsNullOrEmpty(password)) throw new ArgumentException("Value cannot be null or empty.", "password");
             if (String.IsNullOrEmpty(email)) throw new ArgumentException("Value cannot be null or empty.", "email");
 
-            MembershipCreateStatus status;
-            _provider.CreateUser(userName, password, email, null, null, true, null, out status);
-            return status;
+            var user = new User();
+            user.Email = email;
+            user.FirstName = firstName;
+            user.LastName = lastName;
+            user.Nonce = this.CreateNonce();
+            user.Password = this.CreateHash(password, user.Nonce);
+            _Session.Save(user);
+
+            return MembershipCreateStatus.Success;
+        }
+        
+        private static Random random = new Random((int)DateTime.Now.Ticks);
+
+        private string CreateNonce()
+        {
+            StringBuilder builder = new StringBuilder();
+            char ch;
+            for (int i = 0; i < 25; i++)
+            {
+                ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
+                builder.Append(ch);
+            }
+
+            return builder.ToString();
         }
 
         public bool ChangePassword(string userName, string oldPassword, string newPassword)
@@ -138,8 +180,22 @@ namespace CaseReportal.Models
             // than return false in certain failure scenarios.
             try
             {
-                MembershipUser currentUser = _provider.GetUser(userName, true /* userIsOnline */);
-                return currentUser.ChangePassword(oldPassword, newPassword);
+                var u = FindUserByEmail(userName);
+                
+                if (u == null)
+                {
+                    return false;
+                }
+
+                if(this.ValidateUser(u, oldPassword) == false)
+                {
+                    return false;
+                }
+
+                u.Nonce = this.CreateNonce();
+                u.Password = this.CreateHash(newPassword, u.Nonce);
+                _Session.Update(u);
+                return true;
             }
             catch (ArgumentException)
             {
@@ -149,6 +205,18 @@ namespace CaseReportal.Models
             {
                 return false;
             }
+        }
+
+        public string DisplayNameForUser(string email)
+        {
+            return this.FindUserByEmail(email).FirstName;
+        }
+
+        private string CreateHash(string password, string nonce)
+        {
+            var passBytes = Encoding.UTF8.GetBytes(string.Format("{0}{1}", nonce, password));
+            var hashBytes = HashProvider.ComputeHash(passBytes);
+            return Encoding.UTF8.GetString(hashBytes);
         }
     }
 

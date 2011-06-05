@@ -9,8 +9,7 @@ namespace CaseReportal.Model.Mapping
         public void Override(AutoMapping<Article> mapping)
         {
             mapping.Map(x => x.Title).Length(100);
-            mapping.Map(x => x.Case).Length(5000);
-            mapping.Map(x => x.Case).Column("CaseReport");
+            mapping.Map(x => x.Case).Length(5000).Column("CaseReport");
         }
     }
 }

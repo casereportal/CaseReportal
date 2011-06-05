@@ -12,7 +12,7 @@ namespace CaseReportal.Model.Mapping
         public override bool ShouldMap(Type type)
         {
             //.Where(y => y.Namespace == typeof(Article).Namespace)
-            return type.Namespace == typeof(Article).Namespace;
+            return type.Namespace == typeof (Article).Namespace;
         }
     }
 }
