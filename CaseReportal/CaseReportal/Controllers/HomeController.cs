@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using CaseReportal.Model.Entities;
+using CaseReportal.Models;
 using NHibernate;
 
 namespace CaseReportal.Controllers
@@ -19,12 +20,18 @@ namespace CaseReportal.Controllers
         }
         public ActionResult Index()
         {
-            ViewData["Message"] = "Welcome to ASP.NET MVC!";
+            var homeViewModel = new HomeViewModel();
+            using (var itx =_Session.BeginTransaction())
+            {
+                var requiredReviewCount = _Session.QueryOver<Config>().SingleOrDefault().RevCount;
+                homeViewModel.Articles = _Session.CreateQuery("select a from Article a where size(a.Reviews) >= :reviewCount")
+                                                 .SetInt32("reviewCount", requiredReviewCount)
+                                                 .List<Article>()
+                                                 .Where(x=>x.Reviews.Where(y=>y.Approved).Count() >= requiredReviewCount);
+                itx.Commit();
+            }
 
-            var users = this._Session.QueryOver<User>().List();
-            ViewData["Users"] = users;
-
-            return View();
+            return View(homeViewModel);
         }
 
         public ActionResult About()

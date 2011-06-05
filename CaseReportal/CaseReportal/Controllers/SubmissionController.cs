@@ -26,92 +26,6 @@ namespace CaseReportal.Controllers
             return View();
         }
 
-        ////
-        //// GET: /Submission/Details/5
-
-        //public ActionResult Details(int id)
-        //{
-        //    return View();
-        //}
-
-        ////
-        //// GET: /Submission/Create
-
-        //public ActionResult Create()
-        //{
-        //    return View();
-        //} 
-
-        //
-        // POST: /Submission/Create
-
-        //[HttpPost]
-        //public ActionResult Create(FormCollection collection)
-        //{
-        //    try
-        //    {
-        //        // TODO: Add insert logic here
-
-        //        return RedirectToAction("Index");
-        //    }
-        //    catch
-        //    {
-        //        return View();
-        //    }
-        //}
-        
-        ////
-        //// GET: /Submission/Edit/5
- 
-        //public ActionResult Edit(int id)
-        //{
-        //    return View();
-        //}
-
-        ////
-        //// POST: /Submission/Edit/5
-
-        //[HttpPost]
-        //public ActionResult Edit(int id, FormCollection collection)
-        //{
-        //    try
-        //    {
-        //        // TODO: Add update logic here
- 
-        //        return RedirectToAction("Index");
-        //    }
-        //    catch
-        //    {
-        //        return View();
-        //    }
-        //}
-
-        //
-        // GET: /Submission/Delete/5
- 
-        //public ActionResult Delete(int id)
-        //{
-        //    return View();
-        //}
-
-        ////
-        //// POST: /Submission/Delete/5
-
-        //[HttpPost]
-        //public ActionResult Delete(int id, FormCollection collection)
-        //{
-        //    try
-        //    {
-        //        // TODO: Add delete logic here
- 
-        //        return RedirectToAction("Index");
-        //    }
-        //    catch
-        //    {
-        //        return View();
-        //    }
-        //}
-
         public ActionResult Submit()
         {
             return View();
@@ -127,8 +41,9 @@ namespace CaseReportal.Controllers
 
             using (var itx = this._Session.BeginTransaction())
             {
+                var id = Int32.Parse(User.Identity.Name.Split('|')[1]);
                 var user = this._Session.QueryOver<Model.Entities.User>()
-                                        .Where(x => x.Email == User.Identity.Name)
+                                        .Where(x => x.Id == id)
                                         .SingleOrDefault();
                 if (user == null)
                 {

@@ -27,6 +27,9 @@
                     <% if (Request.IsAuthenticated) {%>
                     <li><%:Html.ActionLink("Create Submission", "Submit", "Submission")%></li>
                     <%}%>
+                    <% if (Request.IsAuthenticated) {%>
+                    <li><%:Html.ActionLink("Review Submission", "Index", "Review")%></li>
+                    <%}%>
                 </ul>
             
             </div>
