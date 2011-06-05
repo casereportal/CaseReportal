@@ -10,6 +10,7 @@ namespace CaseReportal.Model.Mapping
         {
             mapping.Map(x => x.Title).Length(100);
             mapping.Map(x => x.Case).Length(5000).Column("CaseReport");
+            mapping.References(x => x.User).Not.Nullable();
         }
     }
 }
