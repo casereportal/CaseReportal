@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Article.cs" />
+    <Compile Include="Entities\Config.cs" />
     <Compile Include="Mapping\ArticleOverrides.cs" />
     <Compile Include="Mapping\CaseReportalAutomappingConfiguration.cs" />
     <Compile Include="Mapping\ReviewOverrides.cs" />

@@ -137,6 +137,12 @@ namespace CaseReportal.Models
             return _Session.QueryOver<User>().Where(x => x.Email == email).SingleOrDefault();
         }
 
+        private User FindUserById(string email)
+        {
+            var id = Int32.Parse(email.Split('|')[0]);
+            return _Session.QueryOver<User>().Where(x => x.Email == email).SingleOrDefault();
+        }
+
         public MembershipCreateStatus CreateUser(string firstName, string lastName, 
                                                  string password, string email)
         {
@@ -157,7 +163,7 @@ namespace CaseReportal.Models
             return MembershipCreateStatus.Success;
         }
         
-        private static Random random = new Random((int)DateTime.Now.Ticks);
+        private readonly static Random random = new Random((int)DateTime.Now.Ticks);
 
         private string CreateNonce()
         {
@@ -211,7 +217,8 @@ namespace CaseReportal.Models
 
         public string DisplayNameForUser(string email)
         {
-            return this.FindUserByEmail(email).FirstName;
+            var user = this.FindUserByEmail(email);
+            return string.Format("{0}|{1}", user.FirstName, user.Id);
         }
 
         private string CreateHash(string password, string nonce)

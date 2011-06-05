@@ -7,7 +7,9 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
+using CaseReportal.Model.Entities;
 using CaseReportal.Models;
+using NHibernate;
 
 namespace CaseReportal.Controllers
 {
@@ -15,12 +17,14 @@ namespace CaseReportal.Controllers
     [HandleError]
     public class AccountController : Controller
     {
+        private readonly ISession _session;
 
         public IFormsAuthenticationService FormsService { get; set; }
         public IMembershipService MembershipService { get; set; }
 
-        public AccountController(AccountMembershipService accountMembershipService)
+        public AccountController(AccountMembershipService accountMembershipService, ISession session)
         {
+            _session = session;
             this.MembershipService = accountMembershipService;
         }
 
@@ -99,7 +103,8 @@ namespace CaseReportal.Controllers
 
                 if (createStatus == MembershipCreateStatus.Success)
                 {
-                    FormsService.SignIn(model.Email, false /* createPersistentCookie */);
+                    var user = _session.QueryOver<User>().Where(x => x.Email == model.Email).SingleOrDefault();
+                    FormsService.SignIn(string.Format("{0}|{1}", user.FirstName, user.Id), false /* createPersistentCookie */);
                     return RedirectToAction("Index", "Home");
                 }
                 else
