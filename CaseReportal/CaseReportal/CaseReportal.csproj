@@ -89,6 +89,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ReviewController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\SubmissionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -97,13 +98,17 @@
     <Compile Include="Models\ArticlesModel.cs" />
     <Compile Include="Models\HomeViewModels.cs" />
     <Compile Include="Models\ReviewModels.cs" />
+    <Compile Include="Models\SearchModels.cs" />
     <Compile Include="Models\SubmissionModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Views\Home\ViewArticle.aspx" />
     <Content Include="Views\Review\Index.aspx" />
     <Content Include="Views\Review\ReviewArticle.aspx" />
+    <Content Include="Views\Search\Index.aspx" />
+    <Content Include="Views\Search\SearchResult.aspx" />
     <Content Include="Views\Submission\Submit.aspx" />
     <Content Include="Views\Submission\Index.aspx" />
     <Content Include="Web.config" />
