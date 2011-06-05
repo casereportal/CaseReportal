@@ -71,6 +71,7 @@
     <Compile Include="Mapping\ArticleOverrides.cs" />
     <Compile Include="Mapping\CaseReportalAutomappingConfiguration.cs" />
     <Compile Include="Mapping\ReviewOverrides.cs" />
+    <Compile Include="Mapping\RoleOverrides.cs" />
     <Compile Include="Mapping\UserOverrides.cs" />
     <Compile Include="ModelModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

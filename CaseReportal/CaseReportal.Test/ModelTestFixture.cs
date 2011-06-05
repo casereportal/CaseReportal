@@ -41,6 +41,18 @@ namespace CaseReportal.Test
             var se = new SchemaExport(_configuration);
             se.SetOutputFile("Output.txt");
             se.Execute(true, true, false);
+
+            var sf = this._configuration.BuildSessionFactory();
+            using (var ses = sf.OpenSession())
+            {
+                using (var itx = ses.BeginTransaction())
+                {
+                    ses.Save(new Role() {RoleName = "UserRole"});
+                    ses.Save(new Role() { RoleName = "ReviewerRole" });
+                    ses.Save(new Role() { RoleName = "AdminRole" });
+                    itx.Commit();
+                }
+            }
         }
 
         [Test]
