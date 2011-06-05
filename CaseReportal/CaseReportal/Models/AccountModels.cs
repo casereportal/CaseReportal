@@ -36,6 +36,7 @@ namespace CaseReportal.Models
         public string ConfirmPassword { get; set; }
     }
 
+    //Log
     public class LogOnModel
     {
         [Required]
