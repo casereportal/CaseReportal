@@ -30,7 +30,7 @@
                 </div>
                 
                 <p>
-                    <input type="submit" value="Log On" />
+                    <input type="submit" value="Submit" />
                 </p>
             </fieldset>
         </div>

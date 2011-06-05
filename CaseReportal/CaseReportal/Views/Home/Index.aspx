@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<CaseReportal.Models.HomeViewModel>" %>
 <%@ Import Namespace="CaseReportal.Model.Entities" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
@@ -6,14 +6,10 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: ViewData["Message"]%></h2>
-    <% foreach (var item in (IEnumerable<User>)ViewData["Users"])
-       {%>
-    <p>User First Name: <%= item.Id %> </p>
-    <p>User First Name: <%= item.FirstName%> </p>
-    <p>User First Name: <%= item.LastName%> </p>
-    <p>User First Name: <%= item.Email%> </p>
-    <p>User First Name: <%= item.Password%> </p>
-    <p>User First Name: <%= item.Nonce%> </p>
+    <h2>Articles: </h2>
+    <% foreach (var article in ViewData.Model.Articles) {%>
+    <p>Article Title: <%= article.Title %> </p>
+    <p>Publish Date: <%= article.Published %> </p>
+    <p>Author: <%= article.User.LastName %>, <%= article.User.FirstName %> </p>
     <% } %>
 </asp:Content>

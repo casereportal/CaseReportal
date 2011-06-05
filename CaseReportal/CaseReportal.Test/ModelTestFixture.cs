@@ -21,15 +21,20 @@ namespace CaseReportal.Test
     public class ModelTestFixture
     {
         private Configuration _configuration;
-
+        
         [SetUp]
         public void Setup()
         {
+
             _configuration = Fluently.Configure()
-                    .Database(MsSqlConfiguration.MsSql2008.ConnectionString(x => x.Database("593101_swbos")
+                   /* .Database(MsSqlConfiguration.MsSql2008.ConnectionString(x => x.Database("593101_swbos")
                                                                                   .Username("593101_swbos")
                                                                                   .Password("SW931ab2")
-                                                                                  .Server("72.3.204.155,4120")))
+                                                                                  .Server("72.3.204.155,4120")))*/
+                      .Database(MsSqlConfiguration.MsSql2008.ConnectionString(x => x.Database("CaseReportal")
+                                                            .Username("chuck.norris@utj9v6knpn.database.windows.net")
+                                                            .Password("P@ssw0rd")
+                                                            .Server("utj9v6knpn.database.windows.net")))
                     .Mappings(x => x.AutoMappings.Add(AutoMap.AssemblyOf<CaseReportalAutomappingConfiguration>(new CaseReportalAutomappingConfiguration())
                                                  .UseOverridesFromAssemblyOf<ReviewOverrides>()))
                     .BuildConfiguration();
@@ -49,6 +54,7 @@ namespace CaseReportal.Test
             {
                 using (var itx = ses.BeginTransaction())
                 {
+                    ses.Save(new Config() {RevCount = 3});
                     ses.Save(new Role() {RoleName = "UserRole"});
                     ses.Save(new Role() { RoleName = "ReviewerRole" });
                     ses.Save(new Role() { RoleName = "AdminRole" });
@@ -61,8 +67,16 @@ namespace CaseReportal.Test
         public void SchemaUpdate()
         {
             var su = new SchemaUpdate(_configuration);
-            
             su.Execute(true, true);
+            var sf = this._configuration.BuildSessionFactory();
+            using (var ses = sf.OpenSession())
+            {
+                using (var itx = ses.BeginTransaction())
+                {
+                    ses.Save(new Config() {RevCount = 3});
+                    itx.Commit();
+                }
+            }
         }
 
         [Test]
