@@ -14,28 +14,26 @@
       <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Mapping/f:CaseReportalAutomappingConfiguration.cs" caret="497" fromTop="14" />
       <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/f:ModelModule.cs" caret="1459" fromTop="17" />
       <File id="9F5586B4-5C97-4085-B651-09D3AA441757/f:Global.asax.cs" caret="1455" fromTop="19" />
-      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Controllers/f:HomeController.cs" caret="423" fromTop="2" />
       <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Views/d:Shared/f:LogOnUserControl.ascx" caret="343" fromTop="12" />
-      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Views/d:Account/f:LogOn.aspx" caret="857" fromTop="19" />
       <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Entities/f:Review.cs" caret="0" fromTop="0" />
       <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Mapping/f:ArticleOverrides.cs" caret="494" fromTop="12" />
       <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Mapping/f:UserOverrides.cs" caret="659" fromTop="15" />
       <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Views/d:Shared/f:Site.Master" caret="0" fromTop="0" />
-      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Views/d:Home/f:Index.aspx" caret="523" fromTop="12" />
-      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Controllers/f:AccountController.cs" caret="1549" fromTop="11" />
       <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Views/d:Account/f:Register.aspx" caret="951" fromTop="5" />
       <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Models/f:AccountModels.cs" caret="2280" fromTop="14" />
       <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Entities/f:Role.cs" caret="188" fromTop="0" />
       <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Mapping/f:RoleOverrides.cs" caret="292" fromTop="9" />
-      <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Mapping/f:ReviewOverrides.cs" caret="452" fromTop="11" />
       <File id="81D486B7-DE89-4B5D-8574-AD2E3CB5AC29/f:ModelTestFixture.cs" caret="1433" fromTop="3" />
+      <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Mapping/f:ReviewOverrides.cs" caret="473" fromTop="14" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Views/d:Account/f:LogOn.aspx" caret="0" fromTop="0" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Controllers/f:AccountController.cs" caret="1549" fromTop="41" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Models/f:ReviewModels.cs" caret="255" fromTop="10" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Controllers/f:ReviewController.cs" caret="765" fromTop="11" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Views/d:Review/f:Index.aspx" caret="0" fromTop="0" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Views/d:Home/f:Index.aspx" caret="0" fromTop="0" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Controllers/f:HomeController.cs" caret="496" fromTop="15" />
     </RecentFiles>
     <RecentEdits>
-      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Models/f:AccountModels.cs" caret="3165" fromTop="3" />
-      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Models/f:AccountModels.cs" caret="7428" fromTop="11" />
-      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Controllers/f:AccountController.cs" caret="1562" fromTop="15" />
-      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Models/f:AccountModels.cs" caret="1194" fromTop="10" />
-      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Models/f:AccountModels.cs" caret="1109" fromTop="7" />
       <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Mapping/f:ArticleOverrides.cs" caret="514" fromTop="12" />
       <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Mapping/f:UserOverrides.cs" caret="266" fromTop="7" />
       <File id="81D486B7-DE89-4B5D-8574-AD2E3CB5AC29/f:ModelTestFixture.cs" caret="2325" fromTop="14" />
@@ -60,7 +58,12 @@
       <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Mapping/f:RoleOverrides.cs" caret="0" fromTop="0" />
       <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Mapping/f:RoleOverrides.cs" caret="394" fromTop="12" />
       <File id="81D486B7-DE89-4B5D-8574-AD2E3CB5AC29/f:ModelTestFixture.cs" caret="2031" fromTop="19" />
-      <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Mapping/f:ReviewOverrides.cs" caret="452" fromTop="11" />
+      <File id="9EA60E40-47B8-45CE-887F-0986B4B57D3A/d:Mapping/f:ReviewOverrides.cs" caret="473" fromTop="14" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Models/f:ReviewModels.cs" caret="255" fromTop="10" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Controllers/f:ReviewController.cs" caret="412" fromTop="13" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Controllers/f:ReviewController.cs" caret="316" fromTop="11" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Controllers/f:ReviewController.cs" caret="795" fromTop="21" />
+      <File id="9F5586B4-5C97-4085-B651-09D3AA441757/d:Controllers/f:ReviewController.cs" caret="765" fromTop="11" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -76,7 +79,7 @@
   </UnitTestRunnerNUnit>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="public" priority="36" />
+      <Item value="public" priority="37" />
       <Item value="prop" priority="10" />
       <Item value="Int32`0" priority="2" />
       <Item value="string" priority="16" />
@@ -92,8 +95,8 @@
       <Item value="AutoMapper" priority="0" />
       <Item value="AutoMap`0" priority="1" />
       <Item value="MsSql2008Dialect`0" priority="0" />
-      <Item value="var" priority="16" />
-      <Item value="new" priority="14" />
+      <Item value="var" priority="17" />
+      <Item value="new" priority="15" />
       <Item value="cfg" priority="1" />
       <Item value="Lazy" priority="0" />
       <Item value="se" priority="4" />
@@ -110,7 +113,7 @@
       <Item value="virtual" priority="1" />
       <Item value="this" priority="17" />
       <Item value="Map`0" priority="0" />
-      <Item value="x" priority="12" />
+      <Item value="x" priority="13" />
       <Item value="namespace" priority="0" />
       <Item value="DivideByZeroException`0" priority="0" />
       <Item value="IAutoMappingOverride" priority="3" />
@@ -128,7 +131,7 @@
       <Item value="MsSqlConnectionStringBuilder`0" priority="0" />
       <Item value="cs" priority="0" />
       <Item value="item" priority="0" />
-      <Item value="using" priority="5" />
+      <Item value="using" priority="6" />
       <Item value="sf" priority="2" />
       <Item value="r" priority="1" />
       <Item value="user" priority="11" />
@@ -136,10 +139,10 @@
       <Item value="log4net" priority="0" />
       <Item value="itx" priority="2" />
       <Item value="HomeController`0" priority="0" />
-      <Item value="session" priority="2" />
+      <Item value="session" priority="4" />
       <Item value="Session" priority="0" />
       <Item value="User" priority="0" />
-      <Item value="ViewData" priority="0" />
+      <Item value="ViewData" priority="1" />
       <Item value="users" priority="0" />
       <Item value="ISession`0" priority="0" />
       <Item value="ISessionFactory`0" priority="0" />
@@ -155,7 +158,7 @@
       <Item value="passBytes" priority="0" />
       <Item value="Encoder`0" priority="0" />
       <Item value="hashBytes" priority="0" />
-      <Item value="_Session" priority="2" />
+      <Item value="_Session" priority="3" />
       <Item value="userName" priority="2" />
       <Item value="if" priority="1" />
       <Item value="u" priority="6" />
@@ -187,6 +190,10 @@
       <Item value="ReviewerRole`0" priority="2" />
       <Item value="Mapping" priority="0" />
       <Item value="_roleName" priority="0" />
+      <Item value="IEnumerable" priority="0" />
+      <Item value="ReviewController`0" priority="0" />
+      <Item value="ModelState" priority="0" />
+      <Item value="ReviewModels" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@FluentNHibernate.Cfg.Fluently">
       <Item value="Configure`0" priority="0" />
@@ -282,7 +289,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:CaseReportal.Model.Entities.Article">
       <Item value="User" priority="1" />
-      <Item value="Reviews" priority="0" />
+      <Item value="Reviews" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:CaseReportal.Model.Entities.User">
       <Item value="FirstName" priority="5" />
@@ -297,9 +304,9 @@
       <Item value="OpenSession`0" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:NHibernate.ISession">
-      <Item value="BeginTransaction`0" priority="0" />
+      <Item value="BeginTransaction`0" priority="1" />
       <Item value="Save`0" priority="4" />
-      <Item value="QueryOver`1" priority="1" />
+      <Item value="QueryOver`1" priority="2" />
       <Item value="Update`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:CaseReportal.Model.Entities.Role">
@@ -314,8 +321,8 @@
       <Item value="_Session" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:NHibernate.IQueryOver`2">
-      <Item value="List`1" priority="0" />
-      <Item value="Where`0" priority="0" />
+      <Item value="List`1" priority="1" />
+      <Item value="Where`0" priority="1" />
       <Item value="SingleOrDefault`1" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Autofac.IComponentContext">
@@ -369,6 +376,15 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:CaseReportal.Model.Entities.Review">
       <Item value="Article" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Iesi.Collections.Generic.ISet`1">
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.ViewDataDictionary">
+      <Item value="Model" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CaseReportal.Models.ReviewModels">
+      <Item value="Articles" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>
