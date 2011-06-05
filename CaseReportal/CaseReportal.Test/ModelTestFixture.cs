@@ -34,13 +34,23 @@ namespace CaseReportal.Test
                                                  .UseOverridesFromAssemblyOf<ReviewOverrides>()))
                     .BuildConfiguration();
         }
+        
         [Test]
         public void OutputSchemaTest()
         {
             var se = new SchemaExport(_configuration);
             se.SetOutputFile("Output.txt");
-            se.Create(true, true);
+            se.Execute(true, true, false);
         }
+
+        [Test]
+        public void SchemaUpdate()
+        {
+            var su = new SchemaUpdate(_configuration);
+            
+            su.Execute(true, true);
+        }
+
         [Test]
         public void CanBuildSessionFActory()
         {
